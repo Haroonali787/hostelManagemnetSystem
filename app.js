@@ -12,6 +12,8 @@ var expressValidator = require('express-validator');
 var sweetalert = require('sweetalert2');
 const http = require('http');
 const Server = require("socket.io");
+var db = require("./models/db_controller")
+var signup = require('./controllers/signup')
 
 
 var app = express();
@@ -24,5 +26,7 @@ app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cookie());
-const PORT = process.env.PORT||3002;
-server.listen(PORT,()=>console.log('server running on port 3002'));
+app.use('/signup', signup)
+
+const PORT = process.env.PORT||3003;
+server.listen(PORT,()=>console.log('server running on port 3001'));
