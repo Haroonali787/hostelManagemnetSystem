@@ -41,6 +41,8 @@ CREATE TABLE `appointment` (
   `phone` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
+
 -- --
 -- -- Dumping data for table `appointment`
 -- --
